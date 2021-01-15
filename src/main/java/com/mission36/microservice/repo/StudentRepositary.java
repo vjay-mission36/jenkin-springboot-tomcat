@@ -15,6 +15,8 @@ public interface StudentRepositary extends JpaRepository<Student, Long> {
 	@Query(nativeQuery = true, value="SELECT ID, STUDENT_NAME, STUDENT_JPA from STUDENT_TBL where lower(student_name) like (%:sname%)")
 	List<Student> retriveByName(String sname);
 	
+	List<Student> findByName(String name);
+	
 	
 
 }
