@@ -1,5 +1,6 @@
 package com.mission36.microservice.entity;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -14,7 +15,6 @@ import javax.persistence.Table;
 public class Student {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 
 	@Column(name = "student_name")
@@ -23,12 +23,11 @@ public class Student {
 	@Column(name = "student_jpa")
 	private Double jpa;
 
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "cource_id")
 	private Cource cource;
 
 	public Student() {
-
 	}
 
 	public Student(Long id, String name, Double jpa) {
