@@ -14,9 +14,6 @@ public class TopicController {
 	
 	@Autowired
 	private TopicService topicService;
-	
-	
-	
 	public List<Topic> getAllTopic(){
 		return new ArrayList<Topic>();
 	}
