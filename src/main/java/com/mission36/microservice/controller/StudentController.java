@@ -19,6 +19,10 @@ import com.mission36.microservice.entity.Student;
 import com.mission36.microservice.service.CourceService;
 import com.mission36.microservice.service.StudentService;
 
+/*
+  sample comment checkin from intellij
+ */
+
 @RestController
 public class StudentController {
 
